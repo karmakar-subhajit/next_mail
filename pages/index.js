@@ -28,7 +28,7 @@ export default function Home() {
 
   return (
     <>
-      <div>
+      <div className='form'>
         <h1>Send Email</h1>
         <form onSubmit={handleSubmit}>
           <input
