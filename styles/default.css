@@ -1,0 +1,205 @@
+/* font-family: 'Montserrat', sans-serif; */
+
+/* Tags */
+* {
+	box-sizing: border-box;
+}
+
+html,
+body {
+	font-family: 'Montserrat', sans-serif;
+	font-weight: 400;
+	-ms-text-size-adjust: 100%;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	margin: 0;
+	font-family: 'Montserrat', sans-serif;
+}
+
+h2.heading-2 {
+	color: var(--color_6);
+}
+
+p, a, span, ul, li, div, button {
+	font-family: 'Montserrat', sans-serif;
+}
+
+p {
+	line-height: 1.8;
+}
+
+img {
+	max-width: 100%;
+}
+
+input, input:focus, select, select:focus, textarea, textarea:focus {
+	outline: none;
+	font-family: 'Montserrat', sans-serif;
+}
+
+
+/* ---------------------------------------------------------------------------- Buttons */
+.btn-row {
+	display: flex;
+	gap: 20px;
+}
+
+.def-btn,
+a.def-btn,
+button.def-btn,
+.submit-btn,
+input.submit-btn {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	padding: 0px 28px;
+	min-width: 140px;
+	min-height: 46px;
+	font-size: 16px;
+	color: var(--color_1);
+	font-weight: 400;
+	line-height: 1;
+	text-decoration: none;
+	border: 1px solid var(--color_1);
+	outline: none;
+	background-color: transparent;
+	transition: all 0.3s ease-in-out;
+}
+
+.def-btn:hover,
+a.def-btn:hover,
+button.def-btn:hover {
+	background-color: var(--color_5);
+}
+
+/* form */
+.def-form {
+	width: 100%;
+}
+
+.input-wrap input,
+.input-wrap select {
+	width: 100%;
+	height: 45px;
+	padding: 0px 24px;
+	border-radius: 5px;
+	border: 1px solid var(--color_5);
+	font-size: 16px;
+	line-height: 1;
+}
+
+.input-wrap textarea {
+	height: 120px;
+	padding: 20px 24px;
+	margin-bottom: -7px;
+}
+
+.input-wrap.password {
+	position: relative;
+}
+
+.input-wrap.password>span {
+	position: absolute;
+	right: 20px;
+	top: 50%;
+	transform: translateY(-50%);
+	background: transparent;
+	border: none;
+	outline: none;
+	padding: 0;
+	display: block;
+	color: var(--color_2);
+	cursor: pointer;
+}
+
+.submit-wrap {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	margin-top: 10px;
+	position: relative;
+	overflow: hidden;
+}
+
+.submit-wrap:after {
+	content: "";
+	width: 20px;
+	height: 20px;
+	border: 2px solid;
+	color: var(--color_5);
+	border-radius: 50%;
+	border-top-color: transparent;
+	position: absolute;
+	animation: loader 1.2s linear infinite;
+	display: none;
+}
+
+@keyframes loader {
+	to {
+		transform: rotate(360deg);
+	}
+}
+
+.submit-wrap.process>input.form-submit {
+	filter: opacity(0.3);
+	pointer-events: none;
+}
+
+.submit-wrap.process:after {
+	display: block;
+}
+
+
+/* ---------------------------------------------- Defult Css */
+.section {
+	padding: 90px 0;
+	overflow: hidden;
+}
+
+.section-title {
+	text-align: center;
+	margin-bottom: 60px;
+}
+
+.section-title h2 {
+	line-height: 1.3;
+	margin: 0 0 0 0;
+}
+
+.container {
+	width: 100%;
+	max-width: var(--container_width) !important;
+	padding: 0 var(--container_space) !important;
+}
+
+
+/* ----------------------------------------------- Backgrounds */
+.bg-img,
+.bg-video {
+	position: absolute;
+	top: 0;
+	left: 0;
+	object-fit: cover;
+	width: 100%;
+	height: 100%;
+	z-index: 1;
+}
+
+.overly {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+/* ---------------------------------------- Text  */
+.text-justify {
+	text-align: justify;
+}
